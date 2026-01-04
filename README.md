@@ -48,3 +48,8 @@ If the training process is taking too long, this project uses the following opti
     ```bash
    cd SolarEnergyPredictorApp
    dotnet run
+
+### 3. Screenshots
+<img width="1917" height="425" alt="Screenshot 2026-01-04 142606" src="https://github.com/user-attachments/assets/a4a67519-df75-4f54-8f0f-78dcf3978ff4" />
+
+<img width="1918" height="547" alt="Screenshot 2026-01-04 142535" src="https://github.com/user-attachments/assets/4709b0de-42ba-49cc-9b53-b822ff8f3819" />
