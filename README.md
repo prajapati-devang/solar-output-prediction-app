@@ -16,9 +16,9 @@ This project implements a **Regression Model** using **ML.NET** and **.NET 10**.
 
 ## 📂 Project Structure
 
-- **`SolarModelTrainer/`**: Console app to train and export the `SolarModel.zip`.
-- **`SolarBlazorApp/`**: Blazor Server web interface for user interaction.
-- **`Data/`**: (Optional) Folder for CSV training data.
+- **`RegressionModelTrainingConsole/`**: Console app to train and export the `SolarModel.zip`.
+- **`SolarEnergyPredictorApp/`**: Blazor Server web interface for user interaction.
+- **`Data/`**: (Optional) Folder for CSV training data. if you want to load data from csv.
 
 ---
 
