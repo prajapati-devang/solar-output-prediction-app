@@ -1,0 +1,35 @@
+﻿@using Microsoft.Extensions.ML
+@inject PredictionEnginePool<SolarInput, SolarPrediction> PredictionPool
+
+@page "/"
+<PageTitle>Solar Energy Predictor 🌞🌞🌞🌞 </PageTitle>
+
+<div class="mb-3">
+    <label>Temperature (°C)</label>
+    <input type="number" @bind="temp" class="form-control" />
+
+    <label>Sunlight Intensity (Lux)</label>
+    <input type="number" @bind="lux" class="form-control" />
+</div>
+
+<button class="btn btn-warning" @onclick="PredictOutput">Estimate Generation</button>
+
+@if (prediction != null)
+{
+    <div class="alert alert-info mt-3">
+        <h4>Predicted Output: @prediction.PredictedEnergy.ToString("N2") kWh</h4>
+    </div>
+}
+
+@code {
+    private float temp = 25;
+    private float lux = 500;
+    private SolarPrediction prediction;
+
+    private void PredictOutput()
+    {
+        var input = new SolarInput { Temperature = temp, Luminosity = lux, Humidity = 30 };
+        prediction = PredictionPool.Predict(input);
+    }
+}
+
